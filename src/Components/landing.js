@@ -7,7 +7,7 @@ const Landing = props => {
     {props.paintings.map(painting =>
     <div class="grid-item">
     <div>{painting.name}</div>
-    <img src={painting.url} onClick={() => props.selectPainting(painting)}></img>
+    <img src={painting.url} alt={"Click here"} onClick={() => props.selectPainting(painting)}></img>
     <div>{painting.artist}, {painting.painted_in}.</div>
     <div>{painting.likes != null ? painting.likes : '0'}</div>
     <button onClick={() => props.likePainting(painting)}>Like</button>

@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
 import Landing from './Components/landing'
-import painting from './Components/painting'
 
 class App extends Component {
   state = {
@@ -54,8 +53,6 @@ class App extends Component {
 
   updateCount = (p, c) => {
     debugger
-    // let painting = this.state.paintings.find(paint => paint.id === p.id)
-    // painting.votes = c
     let updatedPaintings = this.changeVotes(p.id, c)
     this.setState({
       displayed: updatedPaintings
